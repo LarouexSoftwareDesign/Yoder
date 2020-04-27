@@ -1,8 +1,11 @@
 # Yoder
 Yoder is an advanced BBQ Management System for Time and Recipe Cooks
 
+Raspberry Pi Pinout Schematic for Yoder:
+![alt text](./Assets/pi-pin-schematic.png "Raspberry Pi Pinout Schematic for Yoder")
 
-Inline-style: 
+
+Lora Phat for Node: 
 ![alt text](./Assets/lora-phat-node-pi-supply.png "Lora Phat for Node")
 
 ```
