@@ -4,6 +4,9 @@ Yoder is an advanced BBQ Management System for Time and Recipe Cooks
 Raspberry Pi Pinout Schematic for Yoder:
 ![alt text](./Assets/pi-pin-schematic.png "Raspberry Pi Pinout Schematic for Yoder")
 
+Pi-EZConnect Hat Pinout Schematic for Yoder:
+![alt text](./Assets/pi-ezconnect-hat.png "Pi-EZConnect Hat Pinout Schematic for Yoder")
+
 Pi-Plates THERMOplate Pinout Schematic for Yoder:
 ![alt text](./Assets/pi-plates-THERMOplate.png "Pi-Plates THERMOplate Pinout Schematic for Yoder")
 
@@ -47,3 +50,6 @@ RAK811 Breakout U$3
 |3V3   PA13  PA14  PA15  PB3   PB5   PB8   PB9   PA2   GND    |
 ---------------------------------------------------------------
 ```
+
+Sensor Box Pinout Schematic for Yoder:
+![alt text](./Assets/sensor-breakout-box.png "Sensor Box Pinout Schematic for Yoder")
