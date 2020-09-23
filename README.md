@@ -1,6 +1,6 @@
 # Saluminator “BBQ Monitor” Internet of Things (IoT) Appliance
 
-![alt text](./Assets/yoder-monitor-all-1-5000.png "Saluminator BBQ Monitor Internet of Things (IoT) Appliance")
+![alt text](./Assets/yoder-monitor-med-rez-2.png "Saluminator BBQ Monitor Internet of Things (IoT) Appliance")
 
 That is a big title! It describes the cool things that the device does. Here is a list of features…
 
@@ -15,7 +15,7 @@ That is a big title! It describes the cool things that the device does. Here is 
 
 Let’s talk about the design and details. From here on out, we will refer to our hardware appliance as the <b>“BBQ Monitor”</b>.
 
-The BBQ Monitor was designed to be open sourced and shared as a DIY project that most electromnic hobbiests or software developer can do. That said, maybe not all of the harder bits like CNC’n the project case, power-coating, soldering and labeling... and if that is help you need, we do offer up pieces you want from a kit that span all the way from the indiviudal boards to a fully completed appliance that we will ship to you. The BBQ Monitor is an advanced piece of kit and you need some software chops in order to bring the whole thing together. We will do our very best to explain things and be accurate in the details.
+The BBQ Monitor was designed to be open sourced and shared as a DIY project that most electronic hobbyists and/or software developer can build and make it run. That said, maybe not all of the harder bits like CNC’n the project case, power-coating, soldering and labeling... and if that is help you need, we do offer up pieces you want from a kit that span all the way from the indiviudal boards to a fully completed appliance that we will ship to you. The BBQ Monitor is an advanced piece of kit and you need some software chops in order to bring the whole thing together. We will do our very best to explain things and be accurate in the details.
 
 ## HARDWARE
 
@@ -30,3 +30,7 @@ We have documented the following for the hardware details...
 - CNC plans for the project case (we use Easel for the X-Carve CNC machine)
 
 ## SOFTWARE
+
+- Completed Source Code
+- Written in Python 3
+- Full Documentation
