@@ -1,5 +1,7 @@
 # Saluminator “BBQ Monitor” Internet of Things (IoT) Appliance
 
+![alt text](./Assets/yoder-monitor-all-1-5000.png "Saluminator BBQ Monitor Internet of Things (IoT) Appliance")
+
 That is a big title! It describes the cool things that the device does. Here is a list of features…
 
 - Monitor 6 different zones in your BBQ
