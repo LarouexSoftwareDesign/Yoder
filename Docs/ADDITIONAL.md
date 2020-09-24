@@ -1,3 +1,1 @@
-# HARDWARE: Wiring Diagram
-
-
+# HARDWARE: Additional Connections and Information
