@@ -19,5 +19,14 @@ The IoT LoRa Node pHAT uses the RAKWireless RAK811 LoRa node module which is bas
 * Self-adhesive EPDM gasket easily attaches to cover
 * Made from durable ADC-12 aluminum alloy
 * Natural finish
-* External measures 9-27/32" length by 9-27/32" width by 4" height"
-[Link: Amazon Bud Industries CN-5713](https://www.amazon.com/gp/product/B005T78LQY/ref=ppx_yo_dt_b_search_asin_title)
+* External measures 9-27/32" length by 9-27/32" width by 4" height
+
+[Link: Buy at Amazon - Bud Industries CN-5713](https://www.amazon.com/gp/product/B005T78LQY/ref=ppx_yo_dt_b_search_asin_title)
+
+### PART: 10mm LED in Various Colors
+Large 10mm LEDs for the Panel
+[Link: Buy at Amazon - Diffused 10mm LED mixed color pack](https://www.amazon.com/gp/product/B07KWFSLZG)
+
+### PART: Light-emitting Diode Holder Clip Bezel Mount 10mm
+Mounting Sockets for the LED indicators for the Panel
+[Link: Buy at Amazon - Light-emitting Diode Holder Clip Bezel Mount 10mm](https://www.amazon.com/gp/product)
