@@ -27,7 +27,7 @@ We have documented the following for the hardware details...
 - Overview of the [Controllers and Boards](./Docs/HARDWARE.md)
 - Full wiring diagram
 - All of the addtional components and how to connect
-- CNC plans for the project case (we use Easel for the X-Carve CNC machine)
+- CNC plans for the project case (we use Easel for the X-Carve CNC machine) [X-CARVE Plans](./Docs/XCARVE.md)
 
 ## SOFTWARE
 
