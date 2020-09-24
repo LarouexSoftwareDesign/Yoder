@@ -23,11 +23,11 @@ This is an "open hardware" project and you can easily order all of the component
 
 We have documented the following for the hardware details...
 
-- Complete bill of materials
-- Overview of the [Controllers and Boards](./Docs/HARDWARE.md)
-- Full wiring diagram
-- All of the addtional components and how to connect
-- CNC plans for the project case (we use Easel for the X-Carve CNC machine) [X-CARVE Plans](./Docs/XCARVE.md)
+- Complete bill of materials [BOM](./Docs/BOM.md)
+- Overview of the [HARDWARE](./Docs/HARDWARE.md)
+- Full wiring diagram [WIRING](./Docs/WIRING.md)
+- All of the additional components and how to connect [ADDITIONAL](./Docs/ADDITIONAL.md)
+- CNC plans for the project case (we use Easel for the X-Carve CNC machine) [X-CARVE](./Docs/XCARVE.md)
 
 ## SOFTWARE
 
