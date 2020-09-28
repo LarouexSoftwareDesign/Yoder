@@ -25,7 +25,8 @@ We have documented the following for the hardware details...
 
 - Complete bill of materials [BOM](./Docs/BOM.md)
 - Overview of the [HARDWARE](./Docs/HARDWARE.md)
-- Full wiring diagram [WIRING](./Docs/WIRING.md)
+- Full wiring diagram (INTERNAL) [WIRING](./Docs/WIRING.md)
+- Full wiring diagram (EXTERNAL) [EXTERNAL_WIRING](./Docs/EXTERNAL_WIRING.md)
 - All of the additional components and how to connect [ADDITIONAL](./Docs/ADDITIONAL.md)
 - CNC plans for the project case (we use Easel for the X-Carve CNC machine) [X-CARVE](./Docs/XCARVE.md)
 
