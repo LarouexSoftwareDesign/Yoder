@@ -2,9 +2,11 @@
 
 # Saluminator “BBQ Monitor” Internet of Things (IoT) Appliance
 
+## That is a big title! It describes the cool things that the device does.
+
 ![alt text](./Assets/bbq-monitor-hi-rez.png "Saluminator BBQ Monitor Internet of Things (IoT) Appliance")
 
-That is a big title! It describes the cool things that the device does. Here is a list of features…
+Here are the list of features…
 
 - Monitor from 1 to 8 different zones in your BBQ (includes ambient temperature)
 - You set the frequency to capture the temperature readings
