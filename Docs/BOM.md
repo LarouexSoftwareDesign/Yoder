@@ -61,9 +61,15 @@ WerFamily 19mm Latching Push Button Switch 1NO 1NC SPDT ON/Off Waterproof Stainl
 Noise Suppressor Power EMI Filter Terminal Single-Phase Line-Conditioner JREle AC 115/250V 10A
 [Link: Buy at Amazon - Noise Suppressor Power EMI Filter Terminal Single-Phase Line-Conditioner AC 115/250V 10A](https://www.amazon.com/gp/product/B073RLXRPB/)
 
-
 ### PART: Square Single Port USB 3.0 Panel Flush Mount Extension Cable
 BATIGE Square Single Port USB 3.0 Panel Flush Mount Extension Cable with Buckle for Car Truck Boat Motorcycle Dashboard 3ft
 [Link: Buy at Amazon - Square Single Port USB 3.0 Panel Flush Mount Extension Cable](https://www.amazon.com/gp/product/B078LRSZDB/)
 
+### PART: RJ45 Ethernet Connector Breakout Board w/LED Screw terminals Spring
+RJ45 Ethernet Connector Breakout Board w/LED Screw terminals Spring
+[Link: Buy at Amazon - RJ45 Ethernet Connector Breakout Board w/LED Screw terminals Spring](https://www.amazon.com/gp/product/B06XZ3BMTL/)
+
+### PART: Aviation Plug Connector
+Male and Female, hard plastic end cable connector, straight metal plug.
+[Link: Buy at Amazon - Aviation Plug Connector](https://www.amazon.com/gp/product/B07D7SHKGK/)
 
