@@ -78,8 +78,6 @@ We have documented the following for the hardware details...
 - Written in Python 3
 - Full Documentation
 
-    </script>
-    
     <!-- Cook Time Chart -->
     <script type="text/javascript">
       var timeFormat = 'MM/DD/YYYY HH:mm';
