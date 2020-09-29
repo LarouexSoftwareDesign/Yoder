@@ -25,7 +25,7 @@ Yoder is a Meadow Creek TS500 Tank Smoker Trailer and he's built out of a 500 ga
 
 - Fire Box - High heat and the most important zone for variables to maintain consistency through the smoker.
 - Warming Box - This box is used to hold items and keep them warm. It is also capable of acting as a smoking box and sports it own chimney.
-- The chamber area for front and back area are important for consistency. You want to maintain steady temperatures for the various lifecycles of the cooking for diffrent meats, etc.
+- The chamber area(s) for front and back are monitored for consistency. You want to maintain steady temperatures for the various lifecycles of the cooking for diffrent meats, etc.
 
 ![alt text](./Assets/YoderZonesMonitor-transparent-1700.png "Yoder Zones")
 
@@ -48,7 +48,7 @@ Yoder is a Meadow Creek TS500 Tank Smoker Trailer and he's built out of a 500 ga
 - Capacity of Whole Chickens: 100-105
 - Capacity of Whole Pigs: 4 x 40 lbs
 
-### Design
+## BBQ Monitor Design
 
 The BBQ Monitor was designed to be open sourced and shared as a DIY project that most electronic hobbyists and/or software developer can build and make it run. That said, maybe not all of the harder bits like CNC’n the project case, power-coating, soldering and labeling... and if that is help you need, we do offer up pieces you want from a kit that span all the way from the indiviudal boards to a fully completed appliance that we will ship to you. The BBQ Monitor is an advanced piece of kit and you need some software chops in order to bring the whole thing together. We will do our very best to explain things and be accurate in the details.
 
