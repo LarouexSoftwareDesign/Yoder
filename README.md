@@ -2,7 +2,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
 </head>
 
-    
+<body>
+<a name="graphs" id="graphs"></a>
+
 <img align="left" width="100" src="./Assets/saluminator_character-100.png">
 
 # Saluminator “BBQ Monitor” Internet of Things (IoT) Appliance
@@ -75,3 +77,190 @@ We have documented the following for the hardware details...
 - Completed Source Code
 - Written in Python 3
 - Full Documentation
+
+    </script>
+    
+    <!-- Cook Time Chart -->
+    <script type="text/javascript">
+      var timeFormat = 'MM/DD/YYYY HH:mm';
+
+      function newDate(days) {
+        return moment().add(days, 'd').toDate();
+      }
+
+      function newDateString(days) {
+        return moment().add(days, 'd').format(timeFormat);
+      }
+
+      var color = Chart.helpers.color;
+      var config = {
+        type: 'line',
+        data: {
+          labels: [ // Date Objects
+            newDate(0),
+            newDate(1),
+            newDate(2),
+            newDate(3),
+            newDate(4),
+            newDate(5),
+            newDate(6)
+          ],
+          datasets: [{
+            label: 'FIRE',
+            backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+            borderColor: window.chartColors.red,
+            fill: false,
+            data: [{
+              x: newDateString(0),
+              y: randomScalingFactor()
+            }, {
+              x: newDateString(5),
+              y: randomScalingFactor()
+            }, {
+              x: newDateString(7),
+              y: randomScalingFactor()
+            }, {
+              x: newDateString(15),
+              y: randomScalingFactor()
+            }],
+          }, {
+            label: 'WARM',
+            backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+            borderColor: window.chartColors.blue,
+            fill: false,
+            data: [{
+              x: newDateString(0),
+              y: randomScalingFactor()
+            }, {
+              x: newDateString(5),
+              y: randomScalingFactor()
+            }, {
+              x: newDateString(7),
+              y: randomScalingFactor()
+            }, {
+              x: newDateString(15),
+              y: randomScalingFactor()
+            }],
+          }, {
+            label: 'RIGHT BACK',
+            backgroundColor: color(window.chartColors.green).alpha(0.5).rgbString(),
+            borderColor: window.chartColors.green,
+            fill: false,
+            data: [{
+              x: newDateString(0),
+              y: randomScalingFactor()
+            }, {
+              x: newDateString(5),
+              y: randomScalingFactor()
+            }, {
+              x: newDateString(7),
+              y: randomScalingFactor()
+            }, {
+              x: newDateString(15),
+              y: randomScalingFactor()
+            }],
+          }, {
+            label: 'LEFT BACK',
+            backgroundColor: color(window.chartColors.purple).alpha(0.5).rgbString(),
+            borderColor: window.chartColors.purple,
+            fill: false,
+            data: [{
+              x: newDateString(0),
+              y: randomScalingFactor()
+            }, {
+              x: newDateString(5),
+              y: randomScalingFactor()
+            }, {
+              x: newDateString(7),
+              y: randomScalingFactor()
+            }, {
+              x: newDateString(15),
+              y: randomScalingFactor()
+            }],
+          }, {
+            label: 'LEFT FRONT',
+            backgroundColor: color(window.chartColors.grey).alpha(0.5).rgbString(),
+            borderColor: window.chartColors.grey,
+            fill: false,
+            data: [{
+              x: newDateString(0),
+              y: randomScalingFactor()
+            }, {
+              x: newDateString(5),
+              y: randomScalingFactor()
+            }, {
+              x: newDateString(7),
+              y: randomScalingFactor()
+            }, {
+              x: newDateString(15),
+              y: randomScalingFactor()
+            }],
+          }, {
+            label: 'RIGHT FRONT',
+            backgroundColor: color(window.chartColors.orange).alpha(0.5).rgbString(),
+            borderColor: window.chartColors.orange,
+            fill: false,
+            data: [{
+              x: newDateString(0),
+              y: randomScalingFactor()
+            }, {
+              x: newDateString(5),
+              y: randomScalingFactor()
+            }, {
+              x: newDateString(7),
+              y: randomScalingFactor()
+            }, {
+              x: newDateString(15),
+              y: randomScalingFactor()
+            }],
+          }]
+        },
+        options: {
+          title: {
+            text: 'Chart.js Time Scale'
+          },
+          scales: {
+            xAxes: [{
+              type: 'time',
+              time: {
+                parser: timeFormat,
+                // round: 'day'
+                tooltipFormat: 'll HH:mm'
+              },
+              scaleLabel: {
+                display: true,
+                labelString: 'Date'
+              }
+            }],
+            yAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'value'
+              }
+            }]
+          },
+        }
+      };
+
+      window.onload = function() {
+        var ctx = document.getElementById('canvas').getContext('2d');
+        window.myLine = new Chart(ctx, config);
+
+      };
+
+      document.getElementById('randomizeData').addEventListener('click', function() {
+        config.data.datasets.forEach(function(dataset) {
+          dataset.data.forEach(function(dataObj, j) {
+            if (typeof dataObj === 'object') {
+              dataObj.y = randomScalingFactor();
+            } else {
+              dataset.data[j] = randomScalingFactor();
+            }
+          });
+        });
+
+        window.myLine.update();
+      });
+
+    </script>
+</body>
