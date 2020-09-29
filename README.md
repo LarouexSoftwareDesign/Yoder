@@ -23,9 +23,9 @@ Let’s talk about the design and details. From here on out, we will refer to ou
 
 Yoder is a Meadow Creek TS500 Tank Smoker Trailer and he's built out of a 500 gallon tank and can boast of nearly 46 square feet of cooking area. The BBQ Monitor is designed to capture and send the telemetry associated with the six zones of Yoder...
 
-- Fire Box - High heat and the most important zone for variables to maintain consistency through the smoker
-- Warming Box - This box is used to hold items and keep them warm. It is also capable of acting as a smoking box and sports it own chimeny
-- The chamber area for front and back area are important for consistency. You want to maintain steady temperatures for various part of the cook
+- Fire Box - High heat and the most important zone for variables to maintain consistency through the smoker.
+- Warming Box - This box is used to hold items and keep them warm. It is also capable of acting as a smoking box and sports it own chimney.
+- The chamber area for front and back area are important for consistency. You want to maintain steady temperatures for the various lifecycles of the cooking for diffrent meats, etc.
 
 ![alt text](./Assets/YoderZonesMonitor-transparent-1700.png "Yoder Zones")
 
