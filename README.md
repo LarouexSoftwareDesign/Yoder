@@ -25,7 +25,7 @@ Yoder is a Meadow Creek TS500 Tank Smoker Trailer and he's built out of a 500 ga
 
 - Fire Box - High heat and the most important zone for variables to maintain consistency through the smoker.
 - Warming Box - This box is used to hold items and keep them warm. It is also capable of acting as a smoking box and sports it own chimney.
-- The chamber area(s) for front and back are monitored for consistency. You want to maintain steady temperatures for the various lifecycles of the cooking for diffrent meats, etc.
+- The chamber area(s) for front and back are monitored for consistency. You want to maintain steady temperatures for the various lifecycles of the cooking for different meats, etc.
 
 ![alt text](./Assets/YoderZonesMonitor-transparent-1700.png "Yoder Zones")
 
