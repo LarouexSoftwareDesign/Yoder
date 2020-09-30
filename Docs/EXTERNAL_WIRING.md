@@ -14,3 +14,5 @@ The is the wiring modile for the rear. It connects the left and right back chamb
 
 The is the wiring modile for the front. It connects the left and right front chamber.
 ![alt text](../Img/bbq-monitor-wiring-front.png "The FRONT Wiring Module")
+
+![alt text](../Img/wiring-diagram-front.png "The FRONT Wiring Module")
