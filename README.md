@@ -1,10 +1,10 @@
-<img align="left" width="100" src="./Assets/saluminator_character-100.png">
+<img align="left" width="100" src="./Img/saluminator_character-100.png">
 
 # Saluminator “BBQ Monitor” Internet of Things (IoT) Appliance
 
 ## That is a big title! It describes the cool things that the device does.
 
-![alt text](./Assets/bbq-monitor-hi-rez.png "Saluminator BBQ Monitor Internet of Things (IoT) Appliance")
+![alt text](./Img/bbq-monitor-hi-rez.png "Saluminator BBQ Monitor Internet of Things (IoT) Appliance")
 
 Here are the list of features…
 
@@ -27,7 +27,7 @@ Yoder is a Meadow Creek TS500 Tank Smoker Trailer and he's built out of a 500 ga
 - Warming Box - This box is used to hold items and keep them warm. It is also capable of acting as a smoking box and sports it own chimney.
 - The chamber area(s) for front and back are monitored for consistency. You want to maintain steady temperatures for the various lifecycles of the cooking for different meats, etc.
 
-![alt text](./Assets/YoderZonesMonitor-transparent-1700.png "Yoder Zones")
+![alt text](./Img/YoderZonesMonitor-transparent-1700.png "Yoder Zones")
 
 ### Features:
 
@@ -70,4 +70,3 @@ We have documented the following for the hardware details...
 - Completed Source Code
 - Written in Python 3
 - Full Documentation
-

@@ -17,16 +17,16 @@ The BBQ Monitor uses readily available, "off the shelf"...
 The main controller board and brains is based on the Raspberry Pi. It is powerful, easy to program and has robust community around projects, troubleshooting and training.
 
 Raspberry Pi Pinout Schematic for Yoder:
-![alt text](../Assets/pi-pin-schematic.png "Raspberry Pi Pinout Schematic for Yoder")
+![alt text](../Img/pi-pin-schematic.png "Raspberry Pi Pinout Schematic for Yoder")
 
 Pi-EZConnect Hat Pinout Schematic for Yoder:
-![alt text](../Assets/pi-ezconnect-hat.png "Pi-EZConnect Hat Pinout Schematic for Yoder")
+![alt text](../Img/pi-ezconnect-hat.png "Pi-EZConnect Hat Pinout Schematic for Yoder")
 
 Pi-Plates THERMOplate Pinout Schematic for Yoder:
-![alt text](../Assets/pi-plates-THERMOplate.png "Pi-Plates THERMOplate Pinout Schematic for Yoder")
+![alt text](../Img/pi-plates-THERMOplate.png "Pi-Plates THERMOplate Pinout Schematic for Yoder")
 
 Lora Phat for Node:
-![alt text](../Assets/lora-phat-node-pi-supply.png "Lora Phat for Node")
+![alt text](../Img/lora-phat-node-pi-supply.png "Lora Phat for Node")
 
 ```
 GPIO
@@ -68,4 +68,4 @@ RAK811 Breakout U$3
 ```
 
 Sensor Box Pinout Schematic for Yoder:
-![alt text](../Assets/sensor-breakout-box.png "Sensor Box Pinout Schematic for Yoder")
+![alt text](../Img/sensor-breakout-box.png "Sensor Box Pinout Schematic for Yoder")
