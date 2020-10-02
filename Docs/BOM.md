@@ -33,8 +33,15 @@ This 7" Touchscreen display for the Raspberry Pi is perfect for creating portabl
 - Made from durable ADC-12 aluminum alloy
 - Natural finish
 - External measures 9-27/32" length by 9-27/32" width by 4" height
+  [Link: Buy at Amazon - Bud Industries CN-5713](https://www.amazon.com/gp/product/B005T78LQY/ref=ppx_yo_dt_b_search_asin_title)]
 
-[Link: Buy at Amazon - Bud Industries CN-5713](https://www.amazon.com/gp/product/B005T78LQY/ref=ppx_yo_dt_b_search_asin_title)
+### CASE: 115x65x35mm Aluminum Metal Stomp Box Case Enclosure
+
+- Material: Aluminium
+- Color: Silver
+- Style: 1590B
+- 115x65x35mm(4.53''x2.56"x1.38")
+  [Link: Buy at Amazon - 115x65x35mm Aluminum Metal Stomp Box Case Enclosure](https://www.amazon.com/gp/product/B015334J9G/ref=ppx_yo_dt_b_search_asin_title)]
 
 ## PARTS
 
