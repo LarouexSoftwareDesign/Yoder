@@ -4,9 +4,9 @@
 
 ### BOARD: Raspberry Pi (version 3B+ or greater is suggested)
 
-The Raspberry Pi is a low cost, credit-card sized computer that plugs into a computer monitor or TV, and uses a standard keyboard and mouse. It is a capable little device that enables people of all ages to explore computing, and to learn how to program in languages like Scratch and Python.
-
 [Link: Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/)
+
+The Raspberry Pi is a low cost, credit-card sized computer that plugs into a computer monitor or TV, and uses a standard keyboard and mouse. It is a capable little device that enables people of all ages to explore computing, and to learn how to program in languages like Scratch and Python.
 
 ### BOARD/HAT: Pi-Plates THERMOplate
 
