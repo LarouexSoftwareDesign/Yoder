@@ -1,0 +1,23 @@
+# =============================================================================
+# `requirements.txt` installs all dependant packages
+# =============================================================================
+pip
+wheel
+setuptools
+virtualenv
+asyncio
+cryptography
+asyncua
+dataclasses
+texttable
+kivy
+docutils
+pygments
+wifi
+pi-plates
+RPIO
+azure.iot.device
+azure.identity
+azure.keyvault.certificates
+azure.keyvault.secrets
+azure.keyvault.keys

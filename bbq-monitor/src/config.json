@@ -1,0 +1,47 @@
+{
+	"ServerUrlPattern": "opc.tcp://{ip}:{port}/Larouex-Smart-Kitchen/Server",
+	"ClientUrlPattern": "opc.tcp://localhost:{port}/Larouex-Smart-Kitchen/Server",
+	"Port": 4840,
+	"IPAddress": "0.0.0.0",
+  "ServerDiscoveryName": "Larouex Smart Kitchen Server",
+  "Description": "Larouex Smart Kitchen LLC. Advanced Automation and Monitoring of Commercial Kitchens.",
+  "ApplicationUri": "urn:LarouexSmartKitchen:Server",
+  "ReadTimeBetweenTemperatureInSeconds": 3,
+  "NameSpace": "BBQ MONITOR",
+  "Status": {
+    "Pins": {
+      "Alert": 1,
+      "Wait": 2,
+      "Good": 3
+    }
+  },
+  "ThermoPlate": {
+    "Pins":{
+      "Ambient": 12,
+      "FireBox": 6,
+      "WarmingBox": 5,
+      "LeftBack": 4,
+      "RightBack": 3,
+      "LeftFront": 2,
+      "RightFront": 1
+    },
+    "Status":{
+      "FireBox": 5,
+      "WarmingBox": 4,
+      "LeftBack": 3,
+      "RightBack": 2,
+      "LeftFront": 1,
+      "RightFront": 0
+    },
+    "DisplayText":{
+      "Ambient": "Ambient",
+      "FireBox": "Fire Box",
+      "WarmingBox": "Warming Box",
+      "LeftBack": "Left Back Chamber",
+      "RightBack": "Right Back Chamber",
+      "LeftFront": "Left Front Chamber",
+      "RightFront": "Right Front Chamber"
+    },
+    "TemperatureScale": "f"
+  }
+}
