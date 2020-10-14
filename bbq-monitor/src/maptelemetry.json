@@ -1,6 +1,6 @@
 {
   "NameSpace": "BBQ MONITOR",
-  "Created": "2020-10-13 19:22:52.143025",
+  "Created": "2020-10-13 19:36:30.174058",
   "Devices": [
     {
       "Name": "case-larouex-ts500-01",
@@ -9,8 +9,8 @@
       "Interfaces": [
         {
           "Name": "Ambient",
-          "InterfacelId": "urn:BBQMonitor_MeadowCreek_TS500:Ambient:1",
-          "InterfaceInstanceName": "Ambient",
+          "InterfacelId": "urn:BBQMonitor:Ambient:1",
+          "InterfaceInstanceName": "AmbientInstance",
           "Variables": [],
           "Capabilities": [
             {
@@ -52,9 +52,9 @@
           ]
         },
         {
-          "Name": "BBQMonitor",
-          "InterfacelId": "urn:BBQMonitor_MeadowCreek_TS500:BBQMonitor:1",
-          "InterfaceInstanceName": "BBQMonitor",
+          "Name": "MonitorCookSixZones",
+          "InterfacelId": "urn:BBQMonitor:MonitorCookSixZones:1",
+          "InterfaceInstanceName": "MonitorCookSixZonesInstance",
           "Variables": [],
           "Capabilities": [
             {
@@ -147,8 +147,8 @@
         },
         {
           "Name": "Recipe",
-          "InterfacelId": "urn:BBQMonitor_MeadowCreek_TS500:Recipe:1",
-          "InterfaceInstanceName": "Recipe",
+          "InterfacelId": "urn:BBQMonitor:Recipe:1",
+          "InterfaceInstanceName": "RecipeInstance",
           "Variables": [],
           "Capabilities": [
             {

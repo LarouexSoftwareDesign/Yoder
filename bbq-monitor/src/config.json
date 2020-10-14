@@ -49,8 +49,8 @@
 	"Interfaces": [
     {
 			"Name": "Ambient",
-			"InterfacelId": "urn:BBQMonitor_MeadowCreek_TS500:Ambient:1",
-			"InterfaceInstanceName": "Ambient",
+			"InterfacelId": "urn:BBQMonitor:Ambient:1",
+			"InterfaceInstanceName": "AmbientInstance",
 			"Capabilities": [
         {
           "Type": "Telemetry",
@@ -87,9 +87,9 @@
 			]
 		},
 		{
-			"Name": "BBQMonitor",
-			"InterfacelId": "urn:BBQMonitor_MeadowCreek_TS500:BBQMonitor:1",
-			"InterfaceInstanceName": "BBQMonitor",
+			"Name": "MonitorCookSixZones",
+			"InterfacelId": "urn:BBQMonitor:MonitorCookSixZones:1",
+			"InterfaceInstanceName": "MonitorCookSixZonesInstance",
 			"Capabilities": [
         {
           "Type": "Telemetry",
@@ -173,8 +173,8 @@
 		},
 		{
 			"Name": "Recipe",
-			"InterfacelId": "urn:BBQMonitor_MeadowCreek_TS500:Recipe:1",
-			"InterfaceInstanceName": "Recipe",
+			"InterfacelId": "urn:BBQMonitor:Recipe:1",
+			"InterfaceInstanceName": "RecipeInstance",
 			"Capabilities": [
         {
           "Type": "Property",
