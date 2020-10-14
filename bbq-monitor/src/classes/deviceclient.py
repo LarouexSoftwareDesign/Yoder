@@ -18,7 +18,7 @@ from azure.iot.device import Message
 from azure.iot.device import MethodResponse
 
 # our classes
-from Classes.secrets import Secrets
+from classes.secrets import Secrets
 
 class DeviceClient():
 

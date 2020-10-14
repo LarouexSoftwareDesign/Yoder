@@ -1,27 +1,17 @@
 {
   "Devices": [
     {
-      "Name": "case-larouex-ts500-01",
+      "Name": "CasaLarouex-MCTS500-002",
       "DeviceType": "Twins",
-      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Server:1",
+      "DeviceCapabilityModelId": "urn:BBQMonitor:MeadowCreekTS500:1",
       "Interfaces": [
-        {
-          "Name": "Ambient",
-          "InterfacelId": "urn:BBQMonitor:Ambient:1",
-          "InterfaceInstanceName": "AmbientInstance"
-        },
         {
           "Name": "MonitorCookSixZones",
           "InterfacelId": "urn:BBQMonitor:MonitorCookSixZones:1",
           "InterfaceInstanceName": "MonitorCookSixZonesInstance"
-        },
-        {
-          "Name": "Recipe",
-          "InterfacelId": "urn:BBQMonitor:Recipe:1",
-          "InterfaceInstanceName": "RecipeInstance"
         }
-     ]
+      ],
+      "LastProvisioned": "2020-10-13 21:09:27.584904"
     }
-  ],
-  "LastProvisioned": "2020-09-07 23:25:58.659796"
+  ]
 }

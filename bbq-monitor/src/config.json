@@ -6,7 +6,7 @@
   "ServerDiscoveryName": "Larouex Smart Kitchen Server",
   "Description": "Larouex Smart Kitchen LLC. Advanced Automation and Monitoring of Commercial Kitchens.",
   "ApplicationUri": "urn:LarouexSmartKitchen:Server",
-  "TelemetryFrequencyInSeconds": 10,
+  "TelemetryFrequencyInSeconds": 60,
   "ReadTimeBetweenTemperatureInSeconds": 3,
   "NameSpace": "BBQ MONITOR",
   "Status": {
@@ -46,6 +46,48 @@
     },
     "TemperatureScale": "f"
   },
+  "TelemetryRings": [
+    {"Ring0": 15},
+    {"Ring1": 20},
+    {"Ring2": 25},
+    {"Ring3": 30},
+    {"Ring4": 35},
+    {"Ring5": 45},
+    {"Ring6": 60},
+    {"Ring7": 120},
+    {"Ring8": 300},
+    {"Ring9": 1500}
+  ],
+  "IoTCentralPatterns":[
+    {
+      "ModelType": "Twins",
+      "NameSpace": "bbq-monitor-twins",
+      "DeviceCapabilityModelId": "urn:BBQMonitor:MeadowCreekTS500:1",
+      "DeviceNamePrefix": "CasaLarouex-MCTS500-{id}",
+      "IgnoreInterfaceIds": [
+        "urn:BBQMonitor:Ambient:1",
+        "urn:BBQMonitor:Recipe:1"
+      ]
+    },
+    {
+      "ModelType": "Gateways",
+      "NameSpace": "bbq-monitor-gateways",
+      "DeviceCapabilityModelId": "urn:BBQMonitor:{interfaceName}:1",
+      "DeviceNamePrefix": "{nodeName}{id}",
+      "IgnoreInterfaceIds": [
+        "urn:BBQMonitor:Ambient:1"
+      ]
+    },
+    {
+      "ModelType": "Devices",
+      "NameSpace": "bbq-monitor-devices",
+      "DeviceCapabilityModelId": "urn:BBQMonitor:{interfaceName}:1",
+      "DeviceNamePrefix": "casa-larouex-ts500-{nodeName}-{id}",
+      "IgnoreInterfaceIds": [
+        "urn:BBQMonitor:Ambient:1"
+      ]
+    }
+  ],
 	"Interfaces": [
     {
 			"Name": "Ambient",

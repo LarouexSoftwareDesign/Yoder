@@ -22,9 +22,10 @@ from texttable import Texttable
 
 # our classes
 from classes.config import Config
-from classes.devicescache import DevicesCache
+from classes.secrets import Secrets
 from classes.maptelemetry import MapTelemetry
-
+from classes.deviceclient import DeviceClient
+from classes.devicescache import DevicesCache
 
 class Monitor():
 
@@ -51,6 +52,17 @@ class Monitor():
       self.TemperatureRightBack = 0.0
       self.TemperatureLeftFront = 0.0
       self.TemperatureRightFront = 0.0
+
+      # --------------------------------------------------------
+      # Worker Variables for Current Temp
+      # --------------------------------------------------------
+      self.TemperatureAmbientMapName = "ambienttemperature"
+      self.TemperatureFireBoxMapName = "firebox"
+      self.TemperatureWarmingBoxMapName = "warmingbox"
+      self.TemperatureLeftBackMapName = "leftbackchamber"
+      self.TemperatureRightBackMapName = "rightbackchamber"
+      self.TemperatureLeftFrontMapName = "leftfrontchamber"
+      self.TemperatureRightFrontMapName = "rightfrontchamber"
 
       # --------------------------------------------------------
       # Worker Variables for last Read Temp
@@ -103,9 +115,12 @@ class Monitor():
       self.interfaces_instances = {}
       self.capabilities_instances = {}
       self.map_telemetry = []
+      self.load_map_telemetry()
       self.map_telemetry_devices = []
       self.map_telemetry_interfaces = []
       self.map_telemetry_interfaces_capabilities = []
+      self.telemetry_msg = {}
+      self.telemetry_dict = {}
 
       # meta
       self.application_uri = None
@@ -115,6 +130,14 @@ class Monitor():
       self.device_name_prefix = None
       self.ignore_interface_ids = []
 
+      # Device Information
+      self.devices_cache = []
+      self.load_devicescache()
+
+      # Azure Device
+      self.device_client = None
+
+
     # -------------------------------------------------------------------------------
     #   Function:   run
     #   Usage:      The start function starts the OPC Server
@@ -122,6 +145,9 @@ class Monitor():
     async def run(self):
 
       msgCnt = 0
+
+      # Set device client from Azure IoT SDK and connect
+      device_client = None
 
       try:
 
@@ -207,10 +233,47 @@ class Monitor():
           self.LastTemperatureLeftFront = self.TemperatureLeftFront
           self.LastTemperatureRightFront = self.TemperatureLeftFront
 
+          # Send Data to IoT Central
           for device in self.map_telemetry["Devices"]:
-            for interface in device["Interfaces"]:
-              for capability in interface["Capabilities"]:
-                print(capability)
+
+              if device_client == None:
+                self.logger.info("[BBQ MONITOR] CONNECTING IOT CENTRAL: %s" % device_client)
+                device_client = DeviceClient(self.logger, device["Name"])
+                print(device_client)
+                await device_client.connect()
+
+              for interface in device["Interfaces"]:
+
+                self.logger.info("[BBQ MONITOR] InterfacelId: %s" % interface["InterfacelId"])
+                self.logger.info("[BBQ MONITOR] InterfaceInstanceName: %s" % interface["InterfaceInstanceName"])
+
+                self.telemetry_dict = {}
+
+                for capability in interface["Capabilities"]:
+
+                  # Assign variable name and value to dictionary
+                  if capability["Name"] == self.TemperatureAmbientMapName:
+                    self.telemetry_dict[capability["Name"]] = self.TemperatureAmbient
+                  elif capability["Name"] == self.TemperatureFireBoxMapName:
+                    self.telemetry_dict[capability["Name"]] = self.TemperatureFireBox
+                  elif capability["Name"] == self.TemperatureWarmingBoxMapName:
+                    self.telemetry_dict[capability["Name"]] = self.TemperatureWarmingBox
+                  elif capability["Name"] == self.TemperatureLeftBackMapName:
+                    self.telemetry_dict[capability["Name"]] = self.TemperatureLeftBack
+                  elif capability["Name"] == self.TemperatureRightBackMapName:
+                    self.telemetry_dict[capability["Name"]] = self.TemperatureRightBack
+                  elif capability["Name"] == self.TemperatureLeftFrontMapName:
+                    self.telemetry_dict[capability["Name"]] = self.TemperatureLeftFront
+                  elif capability["Name"] == self.TemperatureRightFrontMapName:
+                    self.telemetry_dict[capability["Name"]] = self.TemperatureRightFront
+                  else:
+                    self.telemetry_dict[capability["Name"]] = 0
+                  
+                  self.logger.info("[BBQ MONITOR] DICTIONARY: %s" % self.telemetry_dict)
+
+                self.logger.info("[BBQ MONITOR] SENDING PAYLOAD IOT CENTRAL")
+                await device_client.send_telemetry(self.telemetry_dict, interface["InterfacelId"], interface["InterfaceInstanceName"])
+                self.logger.info("[BBQ MONITOR] SUCCESS")
 
           GPIO.output(self.Good, GPIO.LOW)
 
@@ -219,7 +282,9 @@ class Monitor():
       except Exception as ex:
         self.logger.error("[ERROR] %s" % ex)
         self.logger.error("[TERMINATING] We encountered an error in BBQ Monitor Run::run()" )
-
+      
+      finally:
+        await device_client.disconnect()
 
     # -------------------------------------------------------------------------------
     #   Function:   setup
@@ -309,7 +374,7 @@ class Monitor():
               if capability["UseRangeValues"] == True:
                 range_value = capability["RangeValues"][0]
 
-              # Append the variables to the Interfaces collection for the map telemetry file
+              # Append the capabilties to the Interfaces collection for the map telemetry file
               self.map_telemetry_interfaces_capabilities.append(self.create_map_telemetry_variable(capability_type, display_name, name, capability["IoTCDataType"], capability["Frequency"], capability["OnlyOnValueChange"], capability["UseRangeValues"], capability["RangeValues"]))
               self.logger.info("[BBQ MONITOR] MAP TELEMETRY VARIABLES APPEND: %s" % self.map_telemetry_interfaces[interface_count])
 
@@ -425,3 +490,17 @@ class Monitor():
       map_telemetry_file = MapTelemetry(self.logger)
       map_telemetry_file.update_file(self.map_telemetry)
       return
+
+    # -------------------------------------------------------------------------------
+    #   Function:   load_map_telemetry
+    #   Usage:      Loads the Map Telemetry File that Maps Telemtry for Azure
+    #               Iot Central
+    # -------------------------------------------------------------------------------
+    def load_map_telemetry(self):
+
+      # Load all the map
+      map_telemetry = MapTelemetry(self.logger)
+      map_telemetry.load_file()
+      self.map_telemetry = map_telemetry.data
+      return
+
