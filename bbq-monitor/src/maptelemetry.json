@@ -1,0 +1,197 @@
+{
+  "NameSpace": "BBQ MONITOR",
+  "Created": "2020-10-13 19:22:52.143025",
+  "Devices": [
+    {
+      "Name": "case-larouex-ts500-01",
+      "ModelType": "Twins",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Server:1",
+      "Interfaces": [
+        {
+          "Name": "Ambient",
+          "InterfacelId": "urn:BBQMonitor_MeadowCreek_TS500:Ambient:1",
+          "InterfaceInstanceName": "Ambient",
+          "Variables": [],
+          "Capabilities": [
+            {
+              "Type": "Telemetry",
+              "DisplayName": "Ambient Temperature",
+              "Name": "ambienttemperature",
+              "IoTCDataType": "double",
+              "Frequency": "Ring5",
+              "OnlyOnValueChange": false,
+              "UseRangeValues": true,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                62.45,
+                62.23,
+                65.9,
+                61.54,
+                63.28
+              ]
+            },
+            {
+              "Type": "Telemetry",
+              "DisplayName": "Ambient Humidity",
+              "Name": "ambienthumidity",
+              "IoTCDataType": "double",
+              "Frequency": "Ring5",
+              "OnlyOnValueChange": false,
+              "UseRangeValues": true,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                45.1,
+                43.0,
+                42.3,
+                43.4,
+                44.5
+              ]
+            }
+          ]
+        },
+        {
+          "Name": "BBQMonitor",
+          "InterfacelId": "urn:BBQMonitor_MeadowCreek_TS500:BBQMonitor:1",
+          "InterfaceInstanceName": "BBQMonitor",
+          "Variables": [],
+          "Capabilities": [
+            {
+              "Type": "Telemetry",
+              "DisplayName": "Fire Box",
+              "Name": "firebox",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "UseRangeValues": true,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                590,
+                610,
+                623,
+                624,
+                590,
+                575
+              ]
+            },
+            {
+              "Type": "Telemetry",
+              "DisplayName": "Warming Box",
+              "Name": "warmingbox",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "UseRangeValues": true,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                290,
+                310,
+                323,
+                324,
+                290,
+                275
+              ]
+            },
+            {
+              "Type": "Telemetry",
+              "DisplayName": "Left Back Chamber",
+              "Name": "leftbackchamber",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "UseRangeValues": false,
+              "RangeValueCount": 0,
+              "RangeValueCurrent": 1,
+              "RangeValues": []
+            },
+            {
+              "Type": "Telemetry",
+              "DisplayName": "Right Back Chamber",
+              "Name": "rightbackchamber",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "UseRangeValues": false,
+              "RangeValueCount": 0,
+              "RangeValueCurrent": 1,
+              "RangeValues": []
+            },
+            {
+              "Type": "Telemetry",
+              "DisplayName": "Left Front Chamber",
+              "Name": "leftfrontchamber",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "UseRangeValues": false,
+              "RangeValueCount": 0,
+              "RangeValueCurrent": 1,
+              "RangeValues": []
+            },
+            {
+              "Type": "Telemetry",
+              "DisplayName": "Right Front Chamber",
+              "Name": "rightfrontchamber",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "UseRangeValues": false,
+              "RangeValueCount": 0,
+              "RangeValueCurrent": 1,
+              "RangeValues": []
+            }
+          ]
+        },
+        {
+          "Name": "Recipe",
+          "InterfacelId": "urn:BBQMonitor_MeadowCreek_TS500:Recipe:1",
+          "InterfaceInstanceName": "Recipe",
+          "Variables": [],
+          "Capabilities": [
+            {
+              "Type": "Property",
+              "DisplayName": "Cook Type",
+              "Name": "cooktype",
+              "IoTCDataType": "string",
+              "Frequency": "Ring5",
+              "OnlyOnValueChange": false,
+              "UseRangeValues": true,
+              "RangeValueCount": 1,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                "Brisket"
+              ]
+            },
+            {
+              "Type": "Property",
+              "DisplayName": "Cook Started",
+              "Name": "cookstarted",
+              "IoTCDataType": "datetime",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "UseRangeValues": false,
+              "RangeValueCount": 0,
+              "RangeValueCurrent": 1,
+              "RangeValues": []
+            },
+            {
+              "Type": "Property",
+              "DisplayName": "Current Cook Hour",
+              "Name": "currentcookhour",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "UseRangeValues": false,
+              "RangeValueCount": 0,
+              "RangeValueCurrent": 1,
+              "RangeValues": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "Devices": [
+    {
+      "Name": "case-larouex-ts500-01",
+      "DeviceType": "Twins",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Server:1",
+      "Interfaces": [
+        {
+          "Name": "Ambient",
+          "InterfacelId": "urn:BBQMonitor_MeadowCreek_TS500:Ambient:1",
+          "InterfaceInstanceName": "Ambient"
+        },
+        {
+          "Name": "BBQMonitor",
+          "InterfacelId": "urn:BBQMonitor_MeadowCreek_TS500:BBQMonitor:1",
+          "InterfaceInstanceName": "BBQMonitor"
+        },
+        {
+          "Name": "Recipe",
+          "InterfacelId": "urn:BBQMonitor_MeadowCreek_TS500:Recipe:1",
+          "InterfaceInstanceName": "Recipe"
+        }
+     ]
+    }
+  ],
+  "LastProvisioned": "2020-09-07 23:25:58.659796"
+}

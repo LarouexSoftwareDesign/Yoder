@@ -10,7 +10,7 @@ cryptography
 asyncua
 dataclasses
 texttable
-kivy
+#kivy
 docutils
 pygments
 wifi
