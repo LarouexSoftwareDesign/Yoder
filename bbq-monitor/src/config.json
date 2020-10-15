@@ -7,7 +7,7 @@
   "Description": "Larouex Smart Kitchen LLC. Advanced Automation and Monitoring of Commercial Kitchens.",
   "ApplicationUri": "urn:LarouexSmartKitchen:Server",
   "TelemetryFrequencyInSeconds": 60,
-  "ReadTimeBetweenTemperatureInSeconds": 3,
+  "ReadTimeBetweenTemperatureInSeconds": 5,
   "NameSpace": "BBQ MONITOR",
   "Status": {
     "Pins": {

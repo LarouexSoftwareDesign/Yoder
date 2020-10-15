@@ -1,7 +1,7 @@
 {
   "Devices": [
     {
-      "Name": "CasaLarouex-MCTS500-002",
+      "Name": "CasaLarouex-MCTS500-005",
       "DeviceType": "Twins",
       "DeviceCapabilityModelId": "urn:BBQMonitor:MeadowCreekTS500:1",
       "Interfaces": [
@@ -11,7 +11,7 @@
           "InterfaceInstanceName": "MonitorCookSixZonesInstance"
         }
       ],
-      "LastProvisioned": "2020-10-13 21:09:27.584904"
+      "LastProvisioned": "2020-10-14 11:08:29.922573"
     }
   ]
 }

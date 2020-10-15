@@ -1,9 +1,9 @@
 {
   "NameSpace": "BBQ MONITOR",
-  "Created": "2020-10-13 21:20:37.013502",
+  "Created": "2020-10-14 12:24:30.621799",
   "Devices": [
     {
-      "Name": "CasaLarouex-MCTS500-002",
+      "Name": "CasaLarouex-MCTS500-005",
       "ModelType": "Twins",
       "DeviceCapabilityModelId": "urn:BBQMonitor:MeadowCreekTS500:1",
       "Interfaces": [

@@ -43,6 +43,11 @@ class Monitor():
       self.DAQCPlate_addr = 1
 
       # --------------------------------------------------------
+      # Smoothing Value
+      # --------------------------------------------------------
+      self.smoothing_value = 2.53
+
+      # --------------------------------------------------------
       # Worker Variables for Current Temp
       # --------------------------------------------------------
       self.TemperatureAmbient = 0.0
@@ -162,6 +167,8 @@ class Monitor():
           GPIO.output(self.Good, GPIO.HIGH)
 
           print("[%s]: Reading Thermocoupler Values" % self.config["NameSpace"])
+          print("[%s]: Plate Cold Value" % ThermoPlate.getCOLD(self.ThermoPlate_addr))
+          
 
           # READ FIREBOX
           print("[%s]: Reading the FIRE BOX TEMPERATURE" % self.config["NameSpace"])
@@ -209,20 +216,29 @@ class Monitor():
 
           table = Texttable()
           table.set_deco(Texttable.HEADER)
-          table.set_cols_dtype(["t", "f", "f"])
-          table.set_cols_align(["l", "r", "r"])
-          table.add_rows([["Sensor Name",  "Temperature", "Last Temperature"],
-                          [self.AmbientDisplayText, self.TemperatureAmbient, self.LastTemperatureAmbient],
-                          [self.FireBoxDisplayText, self.TemperatureFireBox, self.LastTemperatureFireBox],
-                          [self.WarmingBoxDisplayText, self.TemperatureWarmingBox, self.LastTemperatureWarmingBox],
-                          [self.LeftBackDisplayText, self.TemperatureLeftBack, self.LastTemperatureLeftBack],
-                          [self.RightBackDisplayText, self.TemperatureRightBack, self.LastTemperatureRightBack],
-                          [self.LeftFrontDisplayText, self.TemperatureLeftFront, self.LastTemperatureLeftFront],
-                          [self.RightFrontDisplayText, self.TemperatureRightFront, self.LastTemperatureRightFront]])
+          table.set_cols_dtype(["t", "f", "f", "f"])
+          table.set_cols_align(["l", "r", "r", "r"])
+          table.add_rows([["Sensor Name",  "Temperature", "Last Temperature", "Smoothing"],
+                          [self.AmbientDisplayText, self.TemperatureAmbient, self.LastTemperatureAmbient, self.TemperatureAmbient / self.smoothing_value],
+                          [self.FireBoxDisplayText, self.TemperatureFireBox, self.LastTemperatureFireBox, self.TemperatureFireBox  / self.smoothing_value],
+                          [self.WarmingBoxDisplayText, self.TemperatureWarmingBox, self.LastTemperatureWarmingBox, self.TemperatureWarmingBox  / self.smoothing_value],
+                          [self.LeftBackDisplayText, self.TemperatureLeftBack, self.LastTemperatureLeftBack, self.TemperatureLeftBack  / self.smoothing_value],
+                          [self.RightBackDisplayText, self.TemperatureRightBack, self.LastTemperatureRightBack, self.TemperatureRightBack  / self.smoothing_value],
+                          [self.LeftFrontDisplayText, self.TemperatureLeftFront, self.LastTemperatureLeftFront, self.TemperatureLeftFront  / self.smoothing_value],
+                          [self.RightFrontDisplayText, self.TemperatureRightFront, self.LastTemperatureRightFront, self.TemperatureRightFront  / self.smoothing_value]])
 
 
           print(table.draw())
           print("***")
+
+          # Smooth Values
+          self.TemperatureAmbient = self.TemperatureAmbient / self.smoothing_value
+          self.TemperatureFireBox = self.TemperatureFireBox / self.smoothing_value
+          self.TemperatureWarmingBox = self.TemperatureWarmingBox / self.smoothing_value
+          self.TemperatureLeftBack = self.TemperatureLeftBack / self.smoothing_value
+          self.TemperatureRightBack = self.TemperatureRightBack / self.smoothing_value
+          self.TemperatureLeftFront = self.TemperatureLeftFront / self.smoothing_value
+          self.TemperatureRightFront = self.TemperatureLeftFront / self.smoothing_value
 
           # Capture Last Values
           self.LastTemperatureAmbient = self.TemperatureAmbient
@@ -318,6 +334,18 @@ class Monitor():
         # Set Temperature Scale
         # --------------------------------------------------------
         ThermoPlate.setSCALE(self.config["ThermoPlate"]["TemperatureScale"])
+        ThermoPlate.setSMOOTH(self.ThermoPlate_addr)
+
+        # --------------------------------------------------------
+        # Set Temperature ThermoCoupler Type
+        # --------------------------------------------------------
+        ThermoPlate.setTYPE(self.ThermoPlate_addr, self.FireBox, 'k')
+        ThermoPlate.setTYPE(self.ThermoPlate_addr, self.WarmingBox, 'k')
+        ThermoPlate.setTYPE(self.ThermoPlate_addr, self.LeftBack, 'k')
+        ThermoPlate.setTYPE(self.ThermoPlate_addr, self.RightBack, 'k')
+        ThermoPlate.setTYPE(self.ThermoPlate_addr, self.LeftFront, 'k')
+        ThermoPlate.setTYPE(self.ThermoPlate_addr, self.RightFront, 'k')
+        
 
         # Verbose
         self.logger.info("[{0}]: ThermoPlate Temperature Scale {1}".format(self.config["NameSpace"], self.config["ThermoPlate"]["TemperatureScale"]))
@@ -503,4 +531,5 @@ class Monitor():
       map_telemetry.load_file()
       self.map_telemetry = map_telemetry.data
       return
+
 
