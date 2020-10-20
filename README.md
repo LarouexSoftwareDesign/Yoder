@@ -68,4 +68,4 @@ We have documented the following for the hardware details...
 ## SOFTWARE
 The device software is written in Python 3 and is fully documented.
 
-- Complete Source Code [PYTHON SRC](./bbq-monitor/src/README.MD)
+- Complete Source Code [PYTHON SRC](./Yoder/tree/master/bbq-monitor)
