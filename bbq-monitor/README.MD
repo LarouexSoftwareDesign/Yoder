@@ -297,7 +297,7 @@ INFO: connected with result code: 0
 INFO: _on_mqtt_connected called
 INFO: ConnectionLockStage(ConnectOperation): processing 0 items in queue
 INFO: ReconnectStage: completing waiting ops with error=None
-INFO: AutoConnectStage(MQTTSubscribeOperation): Connected.  Sending down and adding callback to check result      
+INFO: AutoConnectStage(MQTTSubscribeOperation): Connected.  Sending down and adding callback to check result
 INFO: MQTTTransportStage(MQTTSubscribeOperation): subscribing to $dps/registrations/res/#
 INFO: subscribing to $dps/registrations/res/# with qos 1
 INFO: suback received for 1
@@ -311,7 +311,7 @@ INFO: Received payload:b'{"operationId":"4.3bebef837565cc70.084d383f-ec7b-4820-8
 WARNING: RegistrationStage(RequestAndResponseOperation): Op will transition into polling after interval 2.  Setting timer.
 INFO: RegistrationStage(RequestAndResponseOperation): polling
 INFO: AutoConnectStage(MQTTPublishOperation): Connected.  Sending down and adding callback to check result
-INFO: MQTTTransportStage(MQTTPublishOperation): publishing on $dps/registrations/GET/iotdps-get-operationstatus/?$rid=c944f3e9-3bd6-47f2-8522-637120954296&operationId=4.3bebef837565cc70.084d383f-ec7b-4820-86a4-d6a4be08689c      
+INFO: MQTTTransportStage(MQTTPublishOperation): publishing on $dps/registrations/GET/iotdps-get-operationstatus/?$rid=c944f3e9-3bd6-47f2-8522-637120954296&operationId=4.3bebef837565cc70.084d383f-ec7b-4820-86a4-d6a4be08689c
 INFO: publishing on $dps/registrations/GET/iotdps-get-operationstatus/?$rid=c944f3e9-3bd6-47f2-8522-637120954296&operationId=4.3bebef837565cc70.084d383f-ec7b-4820-86a4-d6a4be08689c
 INFO: payload published for 3
 INFO: message received on $dps/registrations/res/200/?$rid=c944f3e9-3bd6-47f2-8522-637120954296
@@ -325,7 +325,7 @@ assigned
 INFO: Updated Secrets file
 ````
 
-This is the data that will be written to our "devicescache.json" for the device information reflecting our OPC Server...
+This is the data that will be written to our "devicescache.json" for the device information reflecting our BBQ Monitor...
 
 ````json
   {
@@ -347,7 +347,7 @@ This is the data that will be written to our "devicescache.json" for the device 
   }
 ````
 
-This is the secret data that will be written to our "secrets.json" for the device connectivity reflecting our OPC Server details to connect to Azure IoT Central...
+This is the secret data that will be written to our "secrets.json" for the device connectivity reflecting our BBQ Monitor details to connect to Azure IoT Central...
 
 ````json
   "Devices": [
