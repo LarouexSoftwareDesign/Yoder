@@ -200,10 +200,10 @@ If you are working locally and do not want to implement the security and awesome
 ````
 Save the file and you can ignore the "KeyVaultSecrets" section.
 
-## Provisioning our OPC Server as a Device in Azure IoT Central
+## Provisioning our BBQ Monitor as a Device in Azure IoT Central
 Provisioning is factored into a "stand-alone" operation. 
 
-There are excellent tutorials on connecting devices to IoT Central and using Device Provisioning Services online and we won't try to repeat that here. If you are not familar, take a break and visit these topics...
+There are excellent tutorials on connecting devices to IoT Central and using Device Provisioning Services online and we won't try to repeat that here. If you are not familiar, take a break and visit these topics...
 
 * [LINK: Get connected to Azure IoT Central](https://docs.microsoft.com/en-us/azure/iot-central/core/concepts-get-connected)
 * [LINK: Tutorial: Create and connect a client application to your Azure IoT Central application (Python)](https://docs.microsoft.com/en-us/azure/iot-central/core/tutorial-connect-device-python)
@@ -225,3 +225,56 @@ python3 ./provisiondevices.py -h
   -i or --iddevice - This ID will get appended to your Device. Example "001" = larouex-industrial-manufacturing-001
   ------------------------------------------------------------------------------------------------------------------
 ````
+
+You will see a lot of useful information that will "play back" all of the actions that will be taken when provisioning the OPC Server as a device in our IoT Central Application. Lot's of options to test and see how our device will end up in Azure IoT Central, let's actually provision our Device now...
+
+````bash
+python3 ./provisiondevices.py -v -i "001"
+````
+
+You will get simliar verbose output to the What If scenario we ran previously along with this confirmation...
+
+````bash
+...
+WARNING: [PROVISIONING] larouex-industrial-manufacturing-001
+INFO: Updated Devices Cache file:
+````
+
+This is the data that will be written to our "devicescache.json" for the device information reflecting our OPC Server...
+
+````json
+  {
+    "DeviceName": "larouex-industrial-manufacturing-001",
+    "DeviceCapabilityModelId": "urn:LarouexIndustrialManufacturing:Server:1",
+    "Interfaces": [
+      {
+        "Name": "Ambient",
+        "InterfacelId": "urn:larouexindustrialmanufacturing:AmbientInterface:1",
+        "InterfaceInstanceName": "AmbientInterface"
+      },
+      {
+        "Name": "Process",
+        "InterfacelId": "urn:larouexindustrialmanufacturing:ProcessInterface:1",
+        "InterfaceInstanceName": "ProcessInterface"
+      }
+    ],
+    "LastProvisioned": "2020-08-04 14:22:06.216106"
+  }
+ ````
+
+This is the secret data that will be written to our "secrets.json" for the device connectivity reflecting our OPC Server details to connect to Azure IoT Central...
+
+````json
+  "Devices": [
+    {
+      "Name": "larouex-industrial-manufacturing-001",
+      "AssignedHub": "-- hidden assigned-hub --",
+      "DeviceSymmetricKey": "-- hidden device-symmetric-key --"
+    }
+  ]
+````
+
+## The BBQ Monitor Device is Provisioned!
+
+![alt text](./Assets/azure-iotc-provisioned-device-1.png "Device Provisioned")
+
