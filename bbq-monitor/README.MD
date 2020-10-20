@@ -20,6 +20,12 @@ These are a set of tools we will use to develop our apps. You can open the Exten
 
 ![alt text](../Img/vs-code-python-sml.png "VS Code Python")
 
+![alt text](../Img/vs-code-remote-ssh-sml.png "VS Code Remote SSH")
+
+![alt text](../Img/vs-code-remote-edit-sml.png "VS Code Remote SSH Edit")
+
+![alt text](../Img/vs-code-docker-sml.png "VS Code Docker")
+
 
 ### Clone this project "BBQ Monitor Software"...
 Find a working folder for this project on your machine...
@@ -32,14 +38,6 @@ pip3 install -r requirements.txt
 ````
 
 Open the "src" folder in Visual Studio Code.
-
-![alt text](../Img/vs-code-python-sml.png "VS Code Python")
-
-![alt text](../Img/vs-code-remote-ssh-sml.png "VS Code Remote SSH")
-
-![alt text](../Img/vs-code-remote-edit-sml.png "VS Code Remote SSH Edit")
-
-![alt text](../Img/vs-code-docker-sml.png "VS Code Docker")
 
 ### Install the Azure CLI Tooling
 The Azure command-line interface (Azure CLI) is a set of commands used to create and manage Azure resources. The Azure CLI is available across Azure services and is designed to get you working quickly with Azure, with an emphasis on automation.
