@@ -1,0 +1,107 @@
+{
+  "NameSpace": "BBQ MONITOR",
+  "Created": "2020-10-14 12:24:30.621799",
+  "Devices": [
+    {
+      "Name": "CasaLarouex-MCTS500-005",
+      "ModelType": "Twins",
+      "DeviceCapabilityModelId": "urn:BBQMonitor:MeadowCreekTS500:1",
+      "Interfaces": [
+        {
+          "Name": "MonitorCookSixZones",
+          "InterfacelId": "urn:BBQMonitor:MonitorCookSixZones:1",
+          "InterfaceInstanceName": "MonitorCookSixZonesInstance",
+          "Variables": [],
+          "Capabilities": [
+            {
+              "Type": "Telemetry",
+              "DisplayName": "Fire Box",
+              "Name": "firebox",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "UseRangeValues": true,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                590,
+                610,
+                623,
+                624,
+                590,
+                575
+              ]
+            },
+            {
+              "Type": "Telemetry",
+              "DisplayName": "Warming Box",
+              "Name": "warmingbox",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "UseRangeValues": true,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                290,
+                310,
+                323,
+                324,
+                290,
+                275
+              ]
+            },
+            {
+              "Type": "Telemetry",
+              "DisplayName": "Left Back Chamber",
+              "Name": "leftbackchamber",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "UseRangeValues": false,
+              "RangeValueCount": 0,
+              "RangeValueCurrent": 1,
+              "RangeValues": []
+            },
+            {
+              "Type": "Telemetry",
+              "DisplayName": "Right Back Chamber",
+              "Name": "rightbackchamber",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "UseRangeValues": false,
+              "RangeValueCount": 0,
+              "RangeValueCurrent": 1,
+              "RangeValues": []
+            },
+            {
+              "Type": "Telemetry",
+              "DisplayName": "Left Front Chamber",
+              "Name": "leftfrontchamber",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "UseRangeValues": false,
+              "RangeValueCount": 0,
+              "RangeValueCurrent": 1,
+              "RangeValues": []
+            },
+            {
+              "Type": "Telemetry",
+              "DisplayName": "Right Front Chamber",
+              "Name": "rightfrontchamber",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "UseRangeValues": false,
+              "RangeValueCount": 0,
+              "RangeValueCurrent": 1,
+              "RangeValues": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

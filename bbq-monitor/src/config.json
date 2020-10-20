@@ -6,13 +6,14 @@
   "ServerDiscoveryName": "Larouex Smart Kitchen Server",
   "Description": "Larouex Smart Kitchen LLC. Advanced Automation and Monitoring of Commercial Kitchens.",
   "ApplicationUri": "urn:LarouexSmartKitchen:Server",
-  "ReadTimeBetweenTemperatureInSeconds": 3,
+  "TelemetryFrequencyInSeconds": 60,
+  "ReadTimeBetweenTemperatureInSeconds": 5,
   "NameSpace": "BBQ MONITOR",
   "Status": {
     "Pins": {
-      "Alert": 1,
-      "Wait": 2,
-      "Good": 3
+      "Alert": 5,
+      "Wait": 6,
+      "Good": 16
     }
   },
   "ThermoPlate": {
@@ -26,6 +27,7 @@
       "RightFront": 1
     },
     "Status":{
+      "Ambient": 6,
       "FireBox": 5,
       "WarmingBox": 4,
       "LeftBack": 3,
@@ -43,5 +45,214 @@
       "RightFront": "Right Front Chamber"
     },
     "TemperatureScale": "f"
-  }
+  },
+  "TelemetryRings": [
+    {"Ring0": 15},
+    {"Ring1": 20},
+    {"Ring2": 25},
+    {"Ring3": 30},
+    {"Ring4": 35},
+    {"Ring5": 45},
+    {"Ring6": 60},
+    {"Ring7": 120},
+    {"Ring8": 300},
+    {"Ring9": 1500}
+  ],
+  "IoTCentralPatterns":[
+    {
+      "ModelType": "Twins",
+      "NameSpace": "bbq-monitor-twins",
+      "DeviceCapabilityModelId": "urn:BBQMonitor:MeadowCreekTS500:1",
+      "DeviceNamePrefix": "CasaLarouex-MCTS500-{id}",
+      "IgnoreInterfaceIds": [
+        "urn:BBQMonitor:Ambient:1",
+        "urn:BBQMonitor:Recipe:1"
+      ]
+    },
+    {
+      "ModelType": "Gateways",
+      "NameSpace": "bbq-monitor-gateways",
+      "DeviceCapabilityModelId": "urn:BBQMonitor:{interfaceName}:1",
+      "DeviceNamePrefix": "{nodeName}{id}",
+      "IgnoreInterfaceIds": [
+        "urn:BBQMonitor:Ambient:1"
+      ]
+    },
+    {
+      "ModelType": "Devices",
+      "NameSpace": "bbq-monitor-devices",
+      "DeviceCapabilityModelId": "urn:BBQMonitor:{interfaceName}:1",
+      "DeviceNamePrefix": "casa-larouex-ts500-{nodeName}-{id}",
+      "IgnoreInterfaceIds": [
+        "urn:BBQMonitor:Ambient:1"
+      ]
+    }
+  ],
+	"Interfaces": [
+    {
+			"Name": "Ambient",
+			"InterfacelId": "urn:BBQMonitor:Ambient:1",
+			"InterfaceInstanceName": "AmbientInstance",
+			"Capabilities": [
+        {
+          "Type": "Telemetry",
+					"DisplayName": "Ambient Temperature",
+					"Name": "ambienttemperature",
+					"IoTCDataType": "double",
+					"Frequency": "Ring5",
+          "OnlyOnValueChange": false,
+          "UseRangeValues": true,
+					"RangeValues": [
+						62.45,
+						62.23,
+						65.90,
+						61.54,
+						63.28
+					]
+				},
+				{
+          "Type": "Telemetry",
+					"DisplayName": "Ambient Humidity",
+					"Name": "ambienthumidity",
+					"Frequency": "Ring5",
+					"OnlyOnValueChange": false,
+					"IoTCDataType": "double",
+          "UseRangeValues": true,
+					"RangeValues": [
+						45.1,
+						43.0,
+						42.3,
+						43.4,
+						44.5
+					]
+				}
+			]
+		},
+		{
+			"Name": "MonitorCookSixZones",
+			"InterfacelId": "urn:BBQMonitor:MonitorCookSixZones:1",
+			"InterfaceInstanceName": "MonitorCookSixZonesInstance",
+			"Capabilities": [
+        {
+          "Type": "Telemetry",
+					"DisplayName": "Fire Box",
+					"Name": "firebox",
+					"IoTCDataType": "float",
+					"Frequency": "Ring3",
+					"OnlyOnValueChange": false,
+          "UseRangeValues": true,
+					"RangeValues": [
+            590,
+            610,
+            623,
+            624,
+            590,
+            575
+					]
+				},
+				{
+          "Type": "Telemetry",
+					"DisplayName": "Warming Box",
+					"Name": "warmingbox",
+					"IoTCDataType": "float",
+					"Frequency": "Ring3",
+					"OnlyOnValueChange": false,
+          "UseRangeValues": true,
+					"RangeValues": [
+            290,
+            310,
+            323,
+            324,
+            290,
+            275
+					]
+				},
+				{
+          "Type": "Telemetry",
+					"DisplayName": "Left Back Chamber",
+					"Name": "leftbackchamber",
+					"IoTCDataType": "float",
+					"Frequency": "Ring3",
+					"OnlyOnValueChange": false,
+          "UseRangeValues": false,
+					"RangeValues": [
+					]
+				},
+				{
+          "Type": "Telemetry",
+					"DisplayName": "Right Back Chamber",
+					"Name": "rightbackchamber",
+					"IoTCDataType": "float",
+					"Frequency": "Ring3",
+					"OnlyOnValueChange": false,
+          "UseRangeValues": false,
+					"RangeValues": [
+					]
+				},
+				{
+          "Type": "Telemetry",
+					"DisplayName": "Left Front Chamber",
+					"Name": "leftfrontchamber",
+					"IoTCDataType": "float",
+					"Frequency": "Ring3",
+					"OnlyOnValueChange": false,
+          "UseRangeValues": false,
+					"RangeValues": [
+					]
+				},
+				{
+          "Type": "Telemetry",
+					"DisplayName": "Right Front Chamber",
+					"Name": "rightfrontchamber",
+					"IoTCDataType": "float",
+					"Frequency": "Ring3",
+					"OnlyOnValueChange": false,
+          "UseRangeValues": false,
+					"RangeValues": [
+					]
+				}
+			]
+		},
+		{
+			"Name": "Recipe",
+			"InterfacelId": "urn:BBQMonitor:Recipe:1",
+			"InterfaceInstanceName": "RecipeInstance",
+			"Capabilities": [
+        {
+          "Type": "Property",
+					"DisplayName": "Cook Type",
+					"Name": "cooktype",
+					"IoTCDataType": "string",
+					"Frequency": "Ring5",
+					"OnlyOnValueChange": false,
+          "UseRangeValues": true,
+					"RangeValues": [
+            "Brisket"
+					]
+        },
+        {
+          "Type": "Property",
+					"DisplayName": "Cook Started",
+					"Name": "cookstarted",
+					"IoTCDataType": "datetime",
+					"Frequency": "Ring3",
+					"OnlyOnValueChange": false,
+          "UseRangeValues": false,
+					"RangeValues": [
+					]
+        },
+        {
+          "Type": "Property",
+					"DisplayName": "Current Cook Hour",
+					"Name": "currentcookhour",
+					"IoTCDataType": "integer",
+					"Frequency": "Ring3",
+					"OnlyOnValueChange": false,
+          "UseRangeValues": false,
+					"RangeValues": [
+					]
+				}
+			]
+    }
+  ]
 }
