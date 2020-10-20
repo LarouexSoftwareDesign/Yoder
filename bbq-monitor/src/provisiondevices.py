@@ -70,7 +70,7 @@ async def main(argv):
         print("       USAGE: -m Twins | -m Gateways | -m Devices")
         print("       DEFAULT: Twins")
         print("")
-        print("    -n or --numberofdevices - The value is used to enumerate and provision the device(s) count specificed.")
+        print("    -n or --numberofdevices - The value is used to enumerate and provision the device(s) count specified.")
         print("       USAGE: -n 10")
         print("       DEFAULT: 1")
         print("------------------------------------------------------------------------------------------------------------------------------------------")
