@@ -33,6 +33,67 @@ pip3 install -r requirements.txt
 
 Open the "src" folder in Visual Studio Code.
 
+![alt text](./Assets/vs-code-python-sml.png "VS Code Python")
+
+![alt text](./Assets/vs-code-remote-ssh-sml.png "VS Code Remote SSH")
+
+![alt text](./Assets/vs-code-remote-edit-sml.png "VS Code Remote SSH Edit")
+
+![alt text](./Assets/vs-code-docker-sml.png "VS Code Docker")
+
+### Install the Azure CLI Tooling
+The Azure command-line interface (Azure CLI) is a set of commands used to create and manage Azure resources. The Azure CLI is available across Azure services and is designed to get you working quickly with Azure, with an emphasis on automation.
+
+Click the link below and install on your Desktop environment.
+
+[LINK: Install the Azure CLI Tooling](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
+
+
+# Setting up the Development Environment on the Raspberry Pi
+We will need to setup our Raspberry Pi with all of the capabilities we will need to develop for our Protcol Translation Gateway.
+
+## Connecting to the Raspberry Pi using SSH
+We will be connecting to the Raspberry Pi using the remote SSH capability of Visual Studio Code that we installed as part of our development toolchain. When you set the RPi up, we enabled the device to connect to our Wifi network. 
+
+Now we want to find the IP address of our RPi and connect to via VS Code's Remote SSH tools. This will let us develop our code and test our application working remotely connected to the device.
+
+* Here is the documetnation on the extension for VS Code...
+[LINK: Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+
+* Here is how we will connect to the Raspberry Pi...
+[LINK: Remote development over SSH](https://code.visualstudio.com/remote-tutorials/ssh/getting-started)
+
+## Connect to the Raspberry Pi
+
+* Click on the green icon in the bottom left of Visual Studio Code, select "Remote-SSH:Connect to Host..."
+* Enter in the connection IP. It will be "pi@your IP Address". For example "pi@192.186.1.174"
+* You maybe prompted the first time to indetify the Operationing System, choose "Linux"
+* Next, enter the Password for the Raspberry Pi, by default is is raspberry. You should change this right away!
+* Open our Home Folder on the Raspberry Pi
+
+  ![alt text](./Assets/vs-code-connect-remote-ssh-pi-open-home-folder.png "Pi SSH Connect Open Home Folder") 
+
+* Click on left side of the main screen "Open Folder" and the navigation helper will open and default to "/home/pi/" press enter as that is right where we want to go!
+  * You maybe prompted re-enter your password (which is no longer raspberry, right?)
+
+## Create our Project Folder on the Raspberry Pi
+
+* Click on "New Folder" icon
+* Type in "Projects" and press enter to create the folder
+
+  ![alt text](./Assets/vs-code-connect-remote-ssh-pi-create-project-folder.png "Pi SSH Connect Create Project Folder") 
+
+## Update Python on the Raspberry Pi
+
+From the terminal, run these two commands to bring your Python environments to the latest versions...
+
+```` python
+sudo apt-get install python3
+sudo apt-get install python3
+````
+If it all comes back as up to date, then goodness!
+
+## Creating your IoT Central Application and Configuration
 
 ## SECRETS!!! - Azure Connectivity and Protecting Your Secrets
 ### THIS SECTION IS OPTIONAL AND IS INCLUDED AS A "BEST PRACTICE" FOR HANDLING SECRETS FOR AZURE IOT CENTRAL CONNECTIONS
