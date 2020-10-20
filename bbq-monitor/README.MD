@@ -4,6 +4,7 @@
 The code in this repository depends on Visual Studio Code and Python.
 
 ### Your Local Machine
+
 The development "toolchain" refers to all of the various tools, SDK's and bits we need to install on your machine to facilitate a smooth experience developing our project. Our main development tool will be Visual Studio code. 
 
 This project was developed on Python version 3.8.5 and you should be using the latest version of Python as certain libraries like asyncio may not work in older versions.
@@ -20,10 +21,10 @@ These are a set of tools we will use to develop our apps. You can open the Exten
 ![alt text](./Assets/vs-code-python-sml.png "VS Code Python")
 
 
-### Clone this project "IoTC-OPCUA-Server-Basic"...
+### Clone this project "BBQ Monitor Software"...
 Find a working folder for this project on your machine...
 ````bash
-git clone https://github.com/Larouex/IoTC-OPCUA-Server-Basic.git
+git clone https://github.com/LarouexSoftwareDesign/Yoder/tree/master/bbq-monitor
 cd IoTC-OPCUA-Server-Basic
 pip3 install -r requirements.txt
 ````
