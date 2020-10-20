@@ -33,13 +33,13 @@ pip3 install -r requirements.txt
 
 Open the "src" folder in Visual Studio Code.
 
-![alt text](./Assets/vs-code-python-sml.png "VS Code Python")
+![alt text](../Img/vs-code-python-sml.png "VS Code Python")
 
-![alt text](./Assets/vs-code-remote-ssh-sml.png "VS Code Remote SSH")
+![alt text](../Img/vs-code-remote-ssh-sml.png "VS Code Remote SSH")
 
-![alt text](./Assets/vs-code-remote-edit-sml.png "VS Code Remote SSH Edit")
+![alt text](../Img/vs-code-remote-edit-sml.png "VS Code Remote SSH Edit")
 
-![alt text](./Assets/vs-code-docker-sml.png "VS Code Docker")
+![alt text](../Img/vs-code-docker-sml.png "VS Code Docker")
 
 ### Install the Azure CLI Tooling
 The Azure command-line interface (Azure CLI) is a set of commands used to create and manage Azure resources. The Azure CLI is available across Azure services and is designed to get you working quickly with Azure, with an emphasis on automation.
@@ -71,7 +71,7 @@ Now we want to find the IP address of our RPi and connect to via VS Code's Remot
 * Next, enter the Password for the Raspberry Pi, by default is is raspberry. You should change this right away!
 * Open our Home Folder on the Raspberry Pi
 
-  ![alt text](./Assets/vs-code-connect-remote-ssh-pi-open-home-folder.png "Pi SSH Connect Open Home Folder") 
+  ![alt text](../Img/vs-code-connect-remote-ssh-pi-open-home-folder.png "Pi SSH Connect Open Home Folder") 
 
 * Click on left side of the main screen "Open Folder" and the navigation helper will open and default to "/home/pi/" press enter as that is right where we want to go!
   * You maybe prompted re-enter your password (which is no longer raspberry, right?)
@@ -81,7 +81,7 @@ Now we want to find the IP address of our RPi and connect to via VS Code's Remot
 * Click on "New Folder" icon
 * Type in "Projects" and press enter to create the folder
 
-  ![alt text](./Assets/vs-code-connect-remote-ssh-pi-create-project-folder.png "Pi SSH Connect Create Project Folder") 
+  ![alt text](../Img/vs-code-connect-remote-ssh-pi-create-project-folder.png "Pi SSH Connect Create Project Folder") 
 
 ## Update Python on the Raspberry Pi
 
