@@ -12,13 +12,13 @@ This project was developed on Python version 3.8.5 and you should be using the l
 
 | - | Install These Tools |
 |---|---|
-| ![Python](./Assets/python-icon-100.png) | [LINK: Python 3 Installation Page](https://www.python.org/downloads/) - Python is the programming language we will use to build our applications. |
-| ![Visual Studio Code](./Assets/vs-code-icon-100.png) | [LINK: Visual Studio Code Installation Page](https://code.visualstudio.com/download) - Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. This is the IDE we will use to write code and deploy to the our BLE Devices and the Raspberry Pi Gateway.  |
+| ![Python](../Img/python-icon-100.png) | [LINK: Python 3 Installation Page](https://www.python.org/downloads/) - Python is the programming language we will use to build our applications. |
+| ![Visual Studio Code](../Img/vs-code-icon-100.png) | [LINK: Visual Studio Code Installation Page](https://code.visualstudio.com/download) - Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. This is the IDE we will use to write code and deploy to the our BLE Devices and the Raspberry Pi Gateway.  |
 
 ### Install all the Tools for Visual Studio Code
 These are a set of tools we will use to develop our apps. You can open the Extensions sidebar with "Shift+Ctrl+X) or click the icon in the side navigator bar.
 
-![alt text](./Assets/vs-code-python-sml.png "VS Code Python")
+![alt text](../Img/vs-code-python-sml.png "VS Code Python")
 
 
 ### Clone this project "BBQ Monitor Software"...
@@ -56,7 +56,7 @@ I am going to assume the following when we work with Azure and Azure Portal...
 | larouex-industrial-manufacturing-saskey-gateway-secondary | Admin, Device Connection, Azure Edge devices, View Keys, Copy [Secondary Key] | Client Secret |
 
 Once these are all created in Key Vault, your list should look like this...
-![alt text](./Assets/azure-portal-key-vault-secrets-list.png "Azure Portal Key Vault Secrets List") 
+![alt text](../Img/azure-portal-key-vault-secrets-list.png "Azure Portal Key Vault Secrets List") 
 
 https://docs.microsoft.com/en-us/azure/key-vault/certificates/quick-create-python
 
@@ -276,5 +276,5 @@ This is the secret data that will be written to our "secrets.json" for the devic
 
 ## The BBQ Monitor Device is Provisioned!
 
-![alt text](./Assets/azure-iotc-provisioned-device-1.png "Device Provisioned")
+![alt text](../Img/azure-iotc-provisioned-device-1.png "Device Provisioned")
 
