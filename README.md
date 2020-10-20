@@ -66,7 +66,6 @@ We have documented the following for the hardware details...
 - CNC plans for the project case (we use Easel for the X-Carve CNC machine) [X-CARVE](./Docs/XCARVE.md)
 
 ## SOFTWARE
+The device software is written in Python 3 and is fully documented.
 
-- Completed Source Code
-- Written in Python 3
-- Full Documentation
+- Complete Source Code [PYTHON SRC](./bbq-monitor/src/../README.MD)
